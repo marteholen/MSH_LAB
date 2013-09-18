@@ -1,3 +1,10 @@
-function proglangs() {
-var mylist=document.getElementById("myList");
-document.getElementById("favorite").value=mylist.options[mylist.selectedIndex].text; }
+function proglangs()
+{
+var mylistValue=document.getElementById("myList").value;
+document.getElementById("output").innerHTML="Du har valgt " + mylistValue + " som språk";
+}
+
+function myFunction()
+{
+alert("These Pages Are Currently Under Construction!");
+}
