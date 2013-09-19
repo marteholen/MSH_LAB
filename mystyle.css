@@ -1,4 +1,6 @@
-body { /*Viser hvor langt bort teksten skal stå, 11em fra venstre side */
+body { 
+
+   /*Viser hvor langt bort teksten skal stå, 11em fra venstre side */
   		padding-left: 11em;
   		
   		/*Skrifttype; Georgia brukes, TNR og Times brukes hvis Georiga ikke er tilgjengelig*/
