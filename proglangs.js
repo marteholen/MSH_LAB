@@ -1,9 +1,9 @@
-function proglangs()
-{
-var mylistValue=document.getElementById("myList").value;
-document.getElementById("output").innerHTML="Du har valgt " + mylistValue + " som språk";
-}
-
+function printToOutputBox(selectobj){
+	var e_proglangs = document.getElementById("proglangs");
+	var e_outputbox = document.getElementById("outputbox");
+	e_outputbox.innerHTML = "Du har valgt programmeringsspråket " + e_proglangs.options[selectobj.selectedIndex].text;
+ }
+ 
 function myFunction()
 {
 alert("These Pages Are Currently Under Construction!");

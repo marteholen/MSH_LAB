@@ -18,7 +18,6 @@
 <html>
 <head>
 <!-- kaller på javascript fil -->
-<script src="proglangs.js"></script>
 <!-- Laste inn Javascript biblioteker her --> 
  <script type="text/javascript" src="jquery-1.10.2.min.js"></script>
  <!-- Inkludere CSS her -->
@@ -40,7 +39,7 @@
 <!-- Main content -->
 <form>
 <form action="Velg"> Søk i programmeringsspråk:
-<select id="myList" onchange="proglangs()">
+<select name="select-pl" id="proglangs" onChange="printToOutputBox(this)">
 <option value="actionscript">ActionScript</option>
 <option value="AppleScript">AppleScript</option>
 <option value="Asp">Asp</option>
@@ -73,12 +72,12 @@
 
 <h1>Programmeringsspråk- hva er det?</h1>
 
-<p>Velkommen til en mystisk verden av programmeringsspråk
 
-<p id="output"></p>
+
 </form>
 
-
+<span id="outputbox">Velkommen til en mystisk verden av programmeringsspråk.</span>
+<script src="proglangs.js"></script>
 
 
 <!-- Sign and date the page, it's only polite! -->
