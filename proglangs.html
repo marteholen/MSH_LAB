@@ -12,7 +12,7 @@
 
  <!-- Laste inn Javascript biblioteker her -->
   
- <script type="text/javascript" src="jquery-1.10.2.min.js"></script>
+ <script type="text/javascript" src="proglangs.js"></script>
 
  
  <!-- Inkludere CSS her -->
@@ -24,8 +24,9 @@
  
 <h1> Programmeringsspråk </h1>
  
-<form action="Velg"> Velg:
-<select class="text_select" id="field_6" name="field_6">    <option value="actionscript">ActionScript</option>
+<form action="Velg"> Velg:   
+<select name="select-pl" id="proglangs" onChange="printToOutputBox(this)">
+<option value="actionscript">ActionScript</option>
 <option value="AppleScript">AppleScript</option>
 <option value="Asp">Asp</option>
 <option value="Basic">Basic</option>
@@ -50,9 +51,13 @@
 
 
 </select>
-
-<p>Du valgte <br><br> <input type="text" id="favorite"  style="text-align: center; font-size: 20px; background-color: #e8bddc;color: white; border: 0px "></span></p>
 </form>
+
+
+
+
+<ul> <span id="outputbox">Du valgte </span>
+
 
 
 <!-- Script slutt -->
