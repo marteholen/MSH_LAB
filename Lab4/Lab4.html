@@ -12,44 +12,43 @@
 	 <!-- inkludere CSS her -->
   <link rel="stylesheet" type="text/css"  href="css/Lab4.css" />
 	
-	<script>
-	$(function()	{
-	
-	
-		//jQuery funkson
-		$(".firstUL li").each(function()	{
-			$(this).click(function() { // fange hendelsen når brukeren klikker på en av bokstavene
-				$(".firstUL li").removeClass("selected"); // i utgangspunktet fjern selected, hvis den finnes
-				$(this).addClass("selected");// legg til "selected" klassen til det elementet brukeren har klikket på
-				elementClick = $( this ).attr("id");//få tak i dne tilsvarende 'id' for eksempel 'a','b','c'.. osv
-				
-				//rulle til det selekterte DOM-elementet content-for-X. X- selektert bokstav
-				$(".content-container").scrollTo($("#content-for-"+elementClick),800);
-				
-				//Endre bakgrunnsfarge
-				$(".content-container div").css({'background-color' : '#ffffff'} );
-				$(".content-container #content-for-"+elementClick).css({'background-color' : '#d2e2fc'});
-			});	
-		});
-		
-			//legg til klassen selected til første bokstav i alfabetet
-			$( '.return-to-top' ).click(function()	{
-				$( ".firstUL li" ).each(function()	{
-					$( ".firstUL li" ).removeClass( "selected" );
-				});
-				
-				//Legg til klassen selected til første bokstav i alfabetet
-				$("#a").addClass("selected");
-				//rulle til et elememt, "A" i dette tilfelle
-				$(".content.container").scrollTo($("content-for-a"),800);
-				//Bakgrunnsfargen til blå for selektert div og hvit til resten.
-				$(".content-container div").css({'background-color' : '#ffffff'} );
-				$(".content-container #content-for-a").css({'background-color' : '#d2e2fc'});
-			});
-		});
-		
-	
-	</script>
+<script>
+
+				//jQuery funksjon
+                $(function() {
+                $( ".firstUL li" ).each(function() {
+                        $( this ).click(function() { // fange hendelsen når brukeren klikker på en av bokstavene
+                                $( ".firstUL li" ).removeClass( "selected" );  // i utgangspunktet fjern selected, hvis den finnes
+                                $( this ).addClass( "selected" ); // // legg til "selected" klassen til det elementet brukeren har klikket på
+                                elementClick = $( this ).attr( "id" ); //få tak i dne tilsvarende 'id' for eksempel 'a','b','c'.. osv
+                                
+                                //få tak i dne tilsvarende 'id' for eksempel 'a','b','c'.. osv
+                                $( ".content-container" ).scrollTo($( "#content-for-"+elementClick ), 800);
+                                //Endre bakgrunnsfarge
+                                $( ".content-container div" ).css( {'background-color' : '#ffffff'} ); 
+                                $( ".content-container #content-for-"+elementClick ).css( {'background-color' : '#d2e2fc'} ); 
+                        });
+                });        
+                
+                //legg til klassen selected til første bokstav i alfabetet
+                $( '.return-to-top' ).click(function() {
+                        $( ".firstUL li" ).each(function() { 
+                                $( ".firstUL li" ).removeClass( "selected" ); 
+                        });
+                        
+                        //Legg til klassen selected til første bokstav i alfabetet
+                        $( "#a" ).addClass( "selected" ); 
+                        //rulle til et elememt, "A" i dette tilfelle
+                        $( ".content-container" ).scrollTo($( "#content-for-a" ), 800); 
+                        //Bakgrunnsfargen til blå for selektert div og hvit til resten.
+                        $( ".content-container div" ).css( {'background-color' : '#ffffff'} ); 
+                        $( ".content-container #content-for-a" ).css( {'background-color' : '#d2e2fc'} ); 
+                });
+                
+        });
+        
+        
+        </script>     
 	
 	</head>
 <body>	
